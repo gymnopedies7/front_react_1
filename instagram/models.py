@@ -12,10 +12,13 @@ class Post(models.Model):
     def __str__(self):
         return self.message
 
-
     def message_length(self, post):
         return len(post.message)
     # message_length.short_description = "메시지 글자수"
+    
+    class Meta:
+        ordering = ['-id']
+
 '''
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
