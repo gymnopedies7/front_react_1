@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'blog1',
     'instagram',
+    'accounts',
 ]
 
 MIDDLEWARE = [

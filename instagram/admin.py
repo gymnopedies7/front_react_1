@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post
+from .models import Post, Comment, Tag
 from django.utils.safestring import mark_safe
 # Register your models here.
 
@@ -19,3 +19,11 @@ class PostAdmin(admin.ModelAdmin):
         return None
  
         # 기본적으로 장고는 보안문제로, 이미지 링크를 걸어도 바로 안들어감. 따라서 mark_safe를 걸어주면 바로보임
+
+@admin.register(Comment)
+class CommentAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+    pass
